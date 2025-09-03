@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Configure your theme variables here */
+  --font-display: "Inter", "sans-serif";
+  --color-primary-500: oklch(0.84 0.18 117.33);
+  --spacing: 0.25rem;
+}
+
+:root {
+    /* Main Color */
+    --themeColor: #21bf73;
+    --themeColorDark: #39B27B;
+    --themeLightColor: #56d598;
+    --secondaryColor: #B0EACD;
+    --themeDarkColor: #2E374F;
+    --themeWhiteColor: #ffffff;
+
+    /* Greyscale Color */
+    --lightColor: #9EA3AE;
+    --lightDeepColor-1: #9EA3AE;
+    --lightDeepColor-2: #FAF8F6;
+    --lightDeepColor-3: #D3D5DA;
+    --lightDeepColor-4: #9EA3AE;
+    --darkColor: #6C727F;
+    --darkDeepColor-1: #4D5461;
+    --darkDeepColor-2: #394150;
+    --darkDeepColor-3: #212936;
+    --darkDeepColor-4: #0B0A0F;
+    --snuffcolor:#ebe3ef;
+
+    /* Typography */
+    --headline-1: 52px;
+    --headline-2: 40px;
+    --headline-3: 32px;
+    --headline-4: 24px;
+    --bodyXLarge: 20px;
+    --bodyLarge: 18px;
+    --bodyMedium: 16px;
+    --bodySmal: 14px;
+    --bodyXSmal: 10px;
+
+}
+
+
+
+html{
+    scrollbar-color: #dddddd #dddddd;
+    scrollbar-width: thin;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+html::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+html::-webkit-scrollbar-track-piece  {
+    background-color: #dddddd;
+}
+html::-webkit-scrollbar-thumb:vertical {
+    height: 30px;
+    border-radius: 4px;
+    background:#dddddd;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+body {
+    background: var(--darkDeepColor-4);
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+} 
+h6{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
