@@ -31,6 +31,9 @@ export default function ProductCard({ addToCart,searchQuery }) {
             p.name.toLowerCase().includes((searchQuery || "").toLowerCase()) ||
             p.desc.toLowerCase().includes((searchQuery || "").toLowerCase())
     );
+    if (filteredProducts.length === 0) {
+        return <p className="text-center text-red-500 font-bold mt-10">❌ Product not found</p>;
+    }
 
     return (
         <div className="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
