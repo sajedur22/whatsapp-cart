@@ -1,33 +1,26 @@
-
 "use client";
 
-import  '../asets/style.css';
+import "../assets/style.css"; // spelling ঠিক করো
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import ProductCard from "../components/ProductCard";
-import CartModal from "../components/CartModel";
+import CartModal from "../components/CartModel"; // নিশ্চিত হও যে ফাইলের নামও CartModal.js
 
 export default function Page() {
   const [cart, setCart] = useState([]);
   const [showModal, setShowModal] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
   const [form, setForm] = useState({ name: "", email: "", location: "" });
 
-  // ২০টা product
-  const products = Array.from({ length: 20 }, (_, i) => ({
-    id: i + 1,
-    name: `Product ${i + 1}`,
-    price: (i + 1) * 10,
-    image: `../Products/product${(i % 5) + 1}.png`,
-  }));
 
   const addToCart = (product) => {
     const existing = cart.find((item) => item.id === product.id);
     if (existing) {
       setCart(
-        cart.map((item) =>
-          item.id === product.id ? { ...item, qty: item.qty + 1 } : item
-        )
+          cart.map((item) =>
+              item.id === product.id ? { ...item, qty: item.qty + 1 } : item
+          )
       );
     } else {
       setCart([...cart, { ...product, qty: 1 }]);
@@ -62,36 +55,41 @@ export default function Page() {
     });
     message += `\nTotal: $${total}`;
 
-    const phone = "8801571422223"; // তোমার WhatsApp নম্বর
+    const phone = "8801571422223"; // WhatsApp
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
   };
 
   return (
-    <div>
-      <Navbar cartCount={cart.length} onCartClick={() => setShowModal(true)} />
-      <Hero />
-
-      {/* Products */}
-      <div className="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {products.map((p) => (
-          <ProductCard key={p.id} product={p} addToCart={addToCart} />
-        ))}
-      </div>
-
-      {/* Cart Modal */}
-      {showModal && (
-        <CartModal
-          cart={cart}
-          total={total}
-          form={form}
-          setForm={setForm}
-          updateQty={updateQty}
-          onClose={() => setShowModal(false)}
-          onSend={sendToWhatsApp}
+      <div>
+        <Navbar
+            cartCount={cart.length}
+            onCartClick={() => setShowModal(true)}
+            searchQuery={searchQuery}       // search state পাঠাও
+            setSearchQuery={setSearchQuery} // setState function পাঠাও
         />
-      )}
-    </div>
+
+        <Hero />
+
+        {/* products */}
+        <div>
+
+          <ProductCard addToCart={addToCart} searchQuery={searchQuery} />
+
+        </div>
+
+        {/* Cart Modal */}
+        {showModal && (
+            <CartModal
+                cart={cart}
+                total={total}
+                form={form}
+                setForm={setForm}
+                updateQty={updateQty}
+                onClose={() => setShowModal(false)}
+                onSend={sendToWhatsApp}
+            />
+        )}
+      </div>
   );
 }
-
