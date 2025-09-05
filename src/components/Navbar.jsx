@@ -1,9 +1,17 @@
 "use client";
 import { ShoppingCart } from "lucide-react";
 
+
 export default function Navbar({ cartCount, onCartClick, searchQuery, setSearchQuery }) {
+
+
+
+    const handleSearch = () => {
+
+        setSearchQuery(""); // clear input after search
+    };
     return (
-        <nav className="h-16 w-full bg-blue-700/10">
+        <nav className="fixed h-16 w-full z-50 bg-blue-700/10">
             <div className="max-w-[1400px] mx-auto px-2 md:px-10  h-16 flex items-center justify-between gap-5">
                 
                 <h2 className="text-white cursor-pointer text-2xl md:text-4xl" title="My Book Store">
@@ -17,7 +25,7 @@ export default function Navbar({ cartCount, onCartClick, searchQuery, setSearchQ
                         onChange={(e) => setSearchQuery(e.target.value)}
                         className="w-full px-3 py-2 rounded-l bg-gray-800 text-white focus:outline-none focus:ring focus:ring-blue-600 focus:ring-inset"
                     />
-                    <button className="bg-blue-700/90 text-white text-sm md:text-lg  px-2  md:px-4 md:py-2 rounded-r   hover:bg-blue-700 transition">
+                    <button  onClick={handleSearch} className="bg-blue-700/90 text-white text-sm md:text-lg  px-2  md:px-4 md:py-2 rounded-r   hover:bg-blue-700 transition">
                         Search
                     </button>
                 </div>

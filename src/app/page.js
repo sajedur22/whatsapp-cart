@@ -5,7 +5,8 @@ import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import ProductCard from "../components/ProductCard";
-import CartModal from "../components/CartModel"; // নিশ্চিত হও যে ফাইলের নামও CartModal.js
+import CartModal from "../components/CartModel";
+import Footer from "@/components/Footer"; // নিশ্চিত হও যে ফাইলের নামও CartModal.js
 
 export default function Page() {
   const [cart, setCart] = useState([]);
@@ -34,6 +35,14 @@ export default function Page() {
       setCart(cart.map((item) => (item.id === id ? { ...item, qty } : item)));
     }
   };
+
+  const clearCart = () => {
+    setCart([]); // simply reset cart
+  };
+  const removeItem = (id) => {
+    setCart((prevCart) => prevCart.filter((item) => item.id !== id));
+  };
+
 
   const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
 
@@ -73,9 +82,11 @@ export default function Page() {
 
         {/* products */}
         <div>
-
           <ProductCard addToCart={addToCart} searchQuery={searchQuery} />
+        </div>
 
+        <div>
+          <Footer/>
         </div>
 
         {/* Cart Modal */}
@@ -88,6 +99,7 @@ export default function Page() {
                 updateQty={updateQty}
                 onClose={() => setShowModal(false)}
                 onSend={sendToWhatsApp}
+                clearCart={clearCart}
             />
         )}
       </div>

@@ -3,13 +3,29 @@
 import Image from "next/image";
 import React from "react";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
- 
+
 
 const products = [
-    { id: 1, name: "Book of Wisdom", price: 120, desc: "Timeless guide to life lessons.", image:'/products/product1.png' },
-    { id: 2, name: "Learning JavaScript", price: 150, desc: "Perfect for beginners in JS.", image: "/products/product2.png" },
-    { id: 3, name: "React for Beginners", price: 200, desc: "Step-by-step React learning.", image: "/products/product3.png" },
+    { id: 1, name: "Book of Wisdom", price: 120, desc: "Timeless guide to life lessons.", image: "/products/atonic-hobit.png" },
+    { id: 2, name: "Learning JavaScript", price: 150, desc: "Perfect for beginners in JS.", image: "/products/being-the-red-flag.png" },
+    { id: 3, name: "React for Beginners", price: 200, desc: "Step-by-step React learning.", image: "/products/bobdelen.png" },
+    { id: 4, name: "Advanced CSS", price: 100, desc: "Master modern CSS techniques.", image: "/products/company-one.png" },
+    { id: 5, name: "Node.js Essentials", price: 180, desc: "Learn backend development with Node.js.", image: "/products/felosofi-ilras.png" },
+    { id: 6, name: "Python Basics", price: 130, desc: "Introduction to Python programming.", image: "/products/flat-shart.png" },
+    { id: 7, name: "Django for Web", price: 190, desc: "Build web apps using Django.", image: "/products/ideads-from-global.png" },
+    { id: 8, name: "Data Structures", price: 160, desc: "Learn algorithms & data structures.", image: "/products/Matt Ridley.png" },
+    { id: 9, name: "Machine Learning Intro", price: 250, desc: "Get started with ML concepts.", image: "/products/product1.png" },
+    { id: 10, name: "AI with Python", price: 300, desc: "Implement AI projects using Python.", image: "/products/product2.png" },
+    { id: 11, name: "React Advanced", price: 220, desc: "Deep dive into React hooks & context.", image: "/products/product3.png" },
+    { id: 12, name: "TypeScript Guide", price: 170, desc: "Strongly typed JS with TypeScript.", image: "/products/steal-the-book.png" },
+    { id: 13, name: "GraphQL Essentials", price: 200, desc: "Build APIs with GraphQL.", image: "/products/the-chaos-machine.png" },
+    { id: 14, name: "Next.js Projects", price: 240, desc: "Fullstack apps using Next.js.", image: "/products/the-storytelling.png" },
+    { id: 15, name: "Vue.js Basics", price: 150, desc: "Learn Vue.js for frontend development.", image: "/products/the-subtitle-of-fuck.png" },
+    { id: 16, name: "Svelte Starter", price: 140, desc: "Build lightweight apps using Svelte.", image: "/products/the-two-towers.png" },
+    { id: 17, name: "Tailwind CSS Mastery", price: 130, desc: "Design beautiful UIs with Tailwind.", image: "/products/tuist-love.png" },
+
 ];
+
 
 export default function ProductCard({ addToCart,searchQuery }) {
 
@@ -81,23 +97,3 @@ export default function ProductCard({ addToCart,searchQuery }) {
 }
 
 
-//  <div
-//                     key={product.id}
-//                     className="rounded-lg p-1  flex flex-col bg-white  shadow-md shadow-white/60"
-//                 >
-//                     <Image
-//                         src={product.image}
-//                         alt={product.name}
-//                         width={1024} height={1024}
-//                         className="w-full h-50 md:h-60 lg:h-70 object-cover rounded mb-2"
-//                     />
-//                     <h3 className="font-bold text-gray-900/90 text-center">{product.name}</h3>
-//                     <p className="text-sm text-gray-900/50 text-center">{product.desc}</p> {/* ✅ short description */}
-//                     <p className="text-emerald-800 font-semibold mt-1 text-center">${product.price}</p>
-//                     <button
-//                         onClick={() => addToCart(product)}
-//                         className="mt-auto cursor-pointer bg-emerald-600 text-white px-3 py-1 rounded hover:scale-102 duration-300 m-5"
-//                     >
-//                         Add to Cart
-//                     </button>
-//                 </div>
