@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# 🛒 React E-Commerce whatsapp Cart System
 
-First, run the development server:
+A modern E-Commerce Cart Application built with Next.js 13+ and Tailwind CSS.  
+This project demonstrates product listing, cart management, and seamless order placement via WhatsApp.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+
+##  ✨ Features
+
+- 🔍 **Product Search** – Filter products in real-time  
+- ➕ **Add to Cart** – Add items with quantity control  
+- ✏️ **Update Quantity** – Increase or decrease item count  
+- ❌ **Remove Item** – Remove a single product from the cart  
+- 🧹 **Clear Cart** – Empty the entire cart instantly  
+- 📊 **Dynamic Totals** – Auto-updates total price  
+- 📱 **WhatsApp Order Integration** – Send order details directly to WhatsApp  
+- 🎨 **Responsive UI** – Clean and mobile-friendly design  
+
+## Tech Stack
+
+- **Next.js 13+ (App Router)** – Frontend Framework  
+- **React Hooks** – State management  
+- **Tailwind CSS** – Styling and responsiveness  
+- **Lucide React** – Modern icons  
+
+## Project Structure
+
+```
+whatsapp-cart/
+├── public
+│   └── products              #add image
+├── app/
+│   └── page.js               # Main page (manages state & logic)
+├── components/
+│   ├── Navbar.js             # Top navigation with search & cart
+│   ├── Hero.js               # Hero section
+│   ├── ProductCard.js        # Product listing + Add to Cart
+│   ├── CartModal.js          # Modal for cart items + checkout 
+│   └── Footer.js             # Footer section
+├── assets/
+│   └── style.css             # Custom CSS overrides
+├── package.json              # Project dependencies & scripts
+├── next.config.js            # Next.js configuration
+└── README.md                 # Project documentation
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Screenshots
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+### Product Listing
+![Product Listing](public/screenShot/screenshot10.png)
 
-To learn more about Next.js, take a look at the following resources:
+### Cart Modal
+![Cart Modal](public/screenShot/screenshot20.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📱 WhatsApp Order Flow
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Add products to cart
+Fill in Name, Email, and Location
+Click Send Order via WhatsApp
+WhatsApp will open with a pre-filled order summary

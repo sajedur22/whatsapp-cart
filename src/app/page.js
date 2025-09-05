@@ -80,7 +80,7 @@ export default function Page() {
 
         <Hero />
 
-        {/* products */}
+        {/* Image */}
         <div>
           <ProductCard addToCart={addToCart} searchQuery={searchQuery} />
         </div>

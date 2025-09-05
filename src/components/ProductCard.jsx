@@ -6,23 +6,23 @@ import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 
 
 const products = [
-    { id: 1, name: "Book of Wisdom", price: 120, desc: "Timeless guide to life lessons.", image: "/products/atonic-hobit.png" },
-    { id: 2, name: "Learning JavaScript", price: 150, desc: "Perfect for beginners in JS.", image: "/products/being-the-red-flag.png" },
-    { id: 3, name: "React for Beginners", price: 200, desc: "Step-by-step React learning.", image: "/products/bobdelen.png" },
-    { id: 4, name: "Advanced CSS", price: 100, desc: "Master modern CSS techniques.", image: "/products/company-one.png" },
-    { id: 5, name: "Node.js Essentials", price: 180, desc: "Learn backend development with Node.js.", image: "/products/felosofi-ilras.png" },
-    { id: 6, name: "Python Basics", price: 130, desc: "Introduction to Python programming.", image: "/products/flat-shart.png" },
-    { id: 7, name: "Django for Web", price: 190, desc: "Build web apps using Django.", image: "/products/ideads-from-global.png" },
-    { id: 8, name: "Data Structures", price: 160, desc: "Learn algorithms & data structures.", image: "/products/Matt Ridley.png" },
-    { id: 9, name: "Machine Learning Intro", price: 250, desc: "Get started with ML concepts.", image: "/products/product1.png" },
-    { id: 10, name: "AI with Python", price: 300, desc: "Implement AI projects using Python.", image: "/products/product2.png" },
-    { id: 11, name: "React Advanced", price: 220, desc: "Deep dive into React hooks & context.", image: "/products/product3.png" },
-    { id: 12, name: "TypeScript Guide", price: 170, desc: "Strongly typed JS with TypeScript.", image: "/products/steal-the-book.png" },
-    { id: 13, name: "GraphQL Essentials", price: 200, desc: "Build APIs with GraphQL.", image: "/products/the-chaos-machine.png" },
-    { id: 14, name: "Next.js Projects", price: 240, desc: "Fullstack apps using Next.js.", image: "/products/the-storytelling.png" },
-    { id: 15, name: "Vue.js Basics", price: 150, desc: "Learn Vue.js for frontend development.", image: "/products/the-subtitle-of-fuck.png" },
-    { id: 16, name: "Svelte Starter", price: 140, desc: "Build lightweight apps using Svelte.", image: "/products/the-two-towers.png" },
-    { id: 17, name: "Tailwind CSS Mastery", price: 130, desc: "Design beautiful UIs with Tailwind.", image: "/products/tuist-love.png" },
+    { id: 1, name: "Book of Wisdom", price: 120, desc: "Timeless guide to life lessons.", image: "/Image/atonic-hobit.png" },
+    { id: 2, name: "Learning JavaScript", price: 150, desc: "Perfect for beginners in JS.", image: "/Image/being-the-red-flag.png" },
+    { id: 3, name: "React for Beginners", price: 200, desc: "Step-by-step React learning.", image: "/Image/bobdelen.png" },
+    { id: 4, name: "Advanced CSS", price: 100, desc: "Master modern CSS techniques.", image: "/Image/company-one.png" },
+    { id: 5, name: "Node.js Essentials", price: 180, desc: "Learn backend development with Node.js.", image: "/Image/felosofi-ilras.png" },
+    { id: 6, name: "Python Basics", price: 130, desc: "Introduction to Python programming.", image: "/Image/flat-shart.png" },
+    { id: 7, name: "Django for Web", price: 190, desc: "Build web apps using Django.", image: "/Image/ideads-from-global.png" },
+    { id: 8, name: "Data Structures", price: 160, desc: "Learn algorithms & data structures.", image: "/Image/Matt Ridley.png" },
+    { id: 9, name: "Machine Learning Intro", price: 250, desc: "Get started with ML concepts.", image: "/Image/product1.png" },
+    { id: 10, name: "AI with Python", price: 300, desc: "Implement AI projects using Python.", image: "/Image/product2.png" },
+    { id: 11, name: "React Advanced", price: 220, desc: "Deep dive into React hooks & context.", image: "/Image/product3.png" },
+    { id: 12, name: "TypeScript Guide", price: 170, desc: "Strongly typed JS with TypeScript.", image: "/Image/steal-the-book.png" },
+    { id: 13, name: "GraphQL Essentials", price: 200, desc: "Build APIs with GraphQL.", image: "/Image/the-chaos-machine.png" },
+    { id: 14, name: "Next.js Projects", price: 240, desc: "Fullstack apps using Next.js.", image: "/Image/the-storytelling.png" },
+    { id: 15, name: "Vue.js Basics", price: 150, desc: "Learn Vue.js for frontend development.", image: "/Image/the-subtitle-of-fuck.png" },
+    { id: 16, name: "Svelte Starter", price: 140, desc: "Build lightweight apps using Svelte.", image: "/Image/the-two-towers.png" },
+    { id: 17, name: "Tailwind CSS Mastery", price: 130, desc: "Design beautiful UIs with Tailwind.", image: "/Image/tuist-love.png" },
 
 ];
 
@@ -30,7 +30,7 @@ const products = [
 export default function ProductCard({ addToCart,searchQuery }) {
 
 
-    // filter products based on searchQuery
+    // filter Image based on searchQuery
     const filteredProducts = products.filter(
         (p) =>
             p.name.toLowerCase().includes((searchQuery || "").toLowerCase()) ||
